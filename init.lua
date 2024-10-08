@@ -208,6 +208,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- [[ Custom Keymaps ]]
 
 -- JSON Format
+-- Require jq command. See https://jqlang.github.io/jq/
 vim.keymap.set('n', '<leader>jf', '<cmd>:%!jq .<CR>', { desc = '[J]SON [F]ormat' })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
