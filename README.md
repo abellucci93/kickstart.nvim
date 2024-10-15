@@ -33,6 +33,7 @@ External Requirements:
   - etc.
 - [LazyGit](https://github.com/jesseduffield/lazygit) and plugin for NeoVim [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim?tab=readme-ov-file)
   - Turn off welcome message [#1003](https://github.com/jesseduffield/lazygit/issues/1003) `echo "disableStartupPopups: true" >> ~/Library/Application\ Support/lazygit/config.yml`
+- [LazyDocker](https://github.com/jesseduffield/lazydocker) and plugin for NeoVim [lazydocker.nvim](https://github.com/mgierada/lazydocker.nvim?tab=readme-ov-file)
 
 > **NOTE**
 > See [Install Recipes](#Install-Recipes) for additional Windows and Linux specific notes
