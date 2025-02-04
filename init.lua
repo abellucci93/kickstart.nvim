@@ -398,7 +398,7 @@ require('lazy').setup({
         pickers = {
           find_files = {
             -- show hidden files and hide .git folder in telescope results
-            find_command = { 'rg', '--files', '--hidden', '--glob', '!**/.git/*' },
+            find_command = { 'rg', '--files', '--hidden', '--ignore-file', vim.fn.getcwd(), '--glob', '!**/.git/*' },
           },
         },
         extensions = {
