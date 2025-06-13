@@ -232,6 +232,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Require jq command. See https://jqlang.github.io/jq/
 vim.keymap.set('n', '<leader>jf', '<cmd>:%!jq .<CR>', { desc = '[J]SON [F]ormat' })
 
+-- YAML
+vim.keymap.set('n', '<leader>yl', ':!yamllint %<CR>', { desc = '[Y]AML [L]int' })
+vim.keymap.set('n', '<leader>yf', '<cmd>:%!yq .<CR>', { desc = '[Y]AML [F]ormat' })
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -702,6 +706,11 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+
+        yamlls = {
+          setup = {},
+        },
+
         helm_ls = {
           setup = {},
         },
