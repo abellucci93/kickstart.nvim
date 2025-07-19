@@ -39,6 +39,7 @@ External Requirements:
 - [jq](https://jqlang.org/) for JSON format
 - [yq](https://mikefarah.gitbook.io/yq) for YAML format
 - [yamllint](https://yamllint.readthedocs.io/en/stable/quickstart.html) for YAML linting
+- [Yazi](https://github.com/sxyazi/yazi): Yazi - ⚡️ Blazing Fast Terminal File Manager
 
 > [!NOTE]
 > See [Install Recipes](#Install-Recipes) for additional Windows and Linux specific notes
