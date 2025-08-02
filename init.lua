@@ -694,9 +694,12 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
+        gopls = {},
         pyright = {},
         intelephense = {},
+        yamlls = {},
+        helm_ls = {},
+
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -705,15 +708,9 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
-        --
 
-        yamlls = {
-          setup = {},
-        },
-
-        helm_ls = {
-          setup = {},
-        },
+        vtsls = {},
+        vue_ls = {},
 
         lua_ls = {
           -- cmd = { ... },
@@ -761,6 +758,10 @@ require('lazy').setup({
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
+
+            -- Neovim v0.11+
+            -- vim.lsp.config(server_name, server)
+            -- vim.lsp.enable(server_name)
           end,
         },
       }
@@ -928,6 +929,18 @@ require('lazy').setup({
   --    vim.cmd.colorscheme 'tokyonight-night'
   --  end,
   --},
+
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = 'mocha',
+  --   },
+  --   init = function()
+  --     vim.cmd.colorscheme 'catppuccin'
+  --   end,
+  -- },
 
   {
     'rose-pine/neovim',
