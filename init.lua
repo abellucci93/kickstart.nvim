@@ -930,26 +930,27 @@ require('lazy').setup({
   --  end,
   --},
 
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   opts = {
-  --     flavour = 'mocha',
-  --   },
-  --   init = function()
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
-
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
+    opts = {
+      -- flavour = 'mocha',
+      flavour = 'macchiato',
+    },
     init = function()
-      vim.cmd.colorscheme 'rose-pine-moon'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
+
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   priority = 1000,
+  --   init = function()
+  --     vim.cmd.colorscheme 'rose-pine-moon'
+  --   end,
+  -- },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -997,7 +998,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'php', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'php', 'query', 'vim', 'vimdoc', 'yaml' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
